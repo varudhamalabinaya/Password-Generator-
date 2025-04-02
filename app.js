@@ -1,5 +1,7 @@
 document.getElementById('generate').addEventListener('click', () => {
     const length = parseInt(document.getElementById('length').value);
+    
+    // Function to generate random password
     const generatePassword = (length) => {
         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
         let password = '';
@@ -9,6 +11,8 @@ document.getElementById('generate').addEventListener('click', () => {
         }
         return password;
     };
+
+    // Display generated password
     const password = generatePassword(length);
     document.getElementById('password').textContent = `Generated Password: ${password}`;
 });
